@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Fare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Train Fare Calculator</h1>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="trainNo">Train No:</label>
+                <select id="trainNo" name="trainNo" required>
+            <option value="" disabled selected>Select Train No</option>
+            <option value="12028">12028 - Bangalore-Chennai Passenger</option>
+            <option value="23412">
+              23412 - Bangalore-Hyderbad Garib Rath Express
+            </option>
+            <option value="15937">
+              15937 - Karwar-Mangalore Konkan Railway
+            </option>
+            <option value="99861">99861 - Mysore-Mandya Passenger</option>
+            <option value="47243">
+              47243 - Hassan-Mangalore Western ghat Express
+            </option>
+            <!-- Add more options as needed -->
+          </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fromStationCode">From Station Code:</label>
+                <select id="fromStationCode" name="fromStationCode" required>
+            <option value="" disabled selected>Select From Station</option>
+            <option value="SBC">Bangalore</option>
+            <option value="KAWR">Karwar</option>
+            <option value="MYS">Mysore</option>
+            <option value="HAS">Hassan</option>
+            <!-- Add more options as needed -->
+          </select>
+            </div>
+
+            <div class="form-group">
+                <label for="toStationCode">To Station Code:</label>
+                <select id="toStationCode" name="toStationCode" required>
+            <option value="" disabled selected>Select To Station</option>
+            <option value="MYS">Mysore</option>
+            <option value="MGR">Chennai</option>
+            <option value="SCH">Hyderabad</option>
+            <option value="BPL">Bhopal</option>
+            <option value="MAQ">Mangalore</option>
+            <option value="MYA">Mandya</option>
+            <!-- Add more options as needed -->
+          </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
